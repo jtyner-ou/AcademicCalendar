@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Important Dates & Session Deadlines</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>Academic Important Dates & Deadlines</h1>
+
+    <div class="calendar-tabbed-widget">
+      <!-- Semester Tabs -->
+      <div class="tab-navigation" id="semesterTabs">
+        <button class="tab-link active" data-term="Fall 2026">Fall 2026</button>
+        <button class="tab-link" data-term="Winter 2027">Winter 2027</button>
+        <button class="tab-link" data-term="All">All Dates</button>
+      </div>
+
+      <!-- View Switcher Toggle Buttons -->
+      <div class="view-switcher" id="viewSwitcher">
+        <button class="view-btn active" data-view="list">Important Dates List</button>
+        <button class="view-btn" data-view="matrix">Additional Info</button>
+      </div>
+
+      <!-- Search Controls (Visible only in List view) -->
+      <div class="calendar-controls" id="searchControls">
+        <input type="text" id="calendarSearchInput" placeholder="Filter dates or events (e.g., Registration, Refund, Exam)..." />
+      </div>
+
+      <!-- Content Display Area -->
+      <div id="calendarContentDisplay" class="calendar-content">
+        <div class="loading-message">Loading calendar information...</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

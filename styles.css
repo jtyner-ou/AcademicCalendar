@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #000000;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2rem 2rem 3rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 0;
+  color: #000000;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Semester Tabs */
+.tab-navigation {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid #877148;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-link {
+  background-color: #877148;
+  border: 0;
+  color: #ffffff;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.tab-link:hover,
+.tab-link:focus {
+  background-color: #7a6641;
+}
+
+.tab-link.active {
+  background-color: #7a6641;
+  font-weight: 500;
+  box-shadow: inset 0 -3px 0 #000000;
+}
+
+/* View Switcher Toggle Buttons */
+.view-switcher {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-btn {
+  background-color: #ffffff;
+  border: 1px solid #877148;
+  color: #877148;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.view-btn:hover {
+  background-color: #f4f0e6;
+}
+
+.view-btn.active {
+  background-color: #877148;
+  color: #ffffff;
+  border-color: #877148;
+}
+
+/* Filter Controls */
+.calendar-controls {
+  margin-bottom: 1.5rem;
+}
+
+.calendar-controls input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 16px !important;
+  color: #444;
+  outline: 0;
+}
+
+.calendar-controls input[type="text"]:focus {
+  border-color: #877148;
+}
+
+/* Important Dates List */
+.important-dates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.date-row-item {
+  display: flex;
+  padding: 0.75rem 1rem;
+  background-color: #ededed;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.2rem;
+  align-items: center;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.date-row-item:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.date-column {
+  width: 220px;
+  font-weight: 500;
+  color: #877148;
+  flex-shrink: 0;
+}
+
+.event-column {
+  flex-grow: 1;
+}
+
+.event-title {
+  color: #000000;
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+}
+
+/* Session Matrix Table Styles */
+.additional-info-section {
+  margin-top: 0.5rem;
+}
+
+.matrix-title {
+  color: #877148;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
+  border: 1px solid #c3c3c3;
+}
+
+.session-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.session-matrix-table th {
+  background-color: #877148;
+  color: #ffffff;
+  padding: 0.6rem 0.8rem;
+  font-weight: 500;
+  border: 1px solid #7a6641;
+}
+
+.session-matrix-table td,
+.session-matrix-table tbody th {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #c3c3c3;
+}
+
+.session-matrix-table tbody tr:nth-child(even) {
+  background-color: #ededed;
+}
+
+.session-matrix-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.session-matrix-table .session-name {
+  font-weight: 500;
+  color: #000000;
+  background-color: #f4f4f4;
+}
+
+.matrix-footnotes {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+  border-top: 1px dashed #ccc;
+  padding-top: 0.75rem;
+}
+
+.matrix-footnotes p {
+  margin: 0.3rem 0;
+}
+
+.loading-message,
+.no-results,
+.error-msg {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #877148;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 40em) {
+  .tab-navigation {
+    flex-direction: column;
+    gap: 2px;
+    border-bottom: none;
+  }
+
+  .tab-link {
+    border-radius: 4px;
+    text-align: center;
+    padding: 0.6rem;
+  }
+
+  .view-switcher {
+    flex-direction: column;
+  }
+
+  .date-row-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .date-column {
+    width: 100%;
+    margin-bottom: 0.4rem;
+  }
+}
